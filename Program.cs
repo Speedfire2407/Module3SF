@@ -20,12 +20,17 @@
         }
         static void Main(string[] args)
         {
-            
-            string myName = "Alexander";
-            int age = 29;
+            Console.Write("Enter youre name: ");
+            string myName = Console.ReadLine();
+            Console.Write("Enter your age: ");
+            byte age = checked((byte)int.Parse(Console.ReadLine()));
+            int intage = age;
             bool haveYouPet = false;
-            float shoeSize = 42;
-            Console.WriteLine("My name is " + myName + "\nMy age is " + age + "\nDo I have a pet? " + haveYouPet + "\nMy shoe size is " + shoeSize);
+            Console.WriteLine("Your name is {0} and age is {1}", myName, intage);
+            Console.Write("What is your favorite day of week?");
+            var day = (DayOfWeek)int.Parse(Console.ReadLine());
+            Console.WriteLine("Your favorite day is {0}", day);
+
             Console.ReadKey();
         }
     }
